@@ -64,7 +64,6 @@ parameters:
     options:
       - entd
       - egt
-
     allow-custom-value: false
   - name: sampling_rate
     default-value: 0.001
