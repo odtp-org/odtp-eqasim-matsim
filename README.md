@@ -95,7 +95,6 @@ docker run -it --rm \
 ```
 
 
-
 ### Example of `tmux` session
 
 In order to run this container in a remote server and detach from the task you can use `tmux`. In this example you will run the isolated container with the CORSICA scenario.
@@ -111,7 +110,7 @@ docker run -it --rm \
 -e sampling_rate=0.001 \
 -e random_seed=1234 \
 -e java_memory=8GB \
---name odtp-eqasim odtp-eqasim
+--name odtp-matsim-eqasim odtp-matsim-eqasim
 ```
 
 Now you can push Control + B, and then D to dettach from the tmux session. In order to come back to the session you can do: 
@@ -124,7 +123,8 @@ If you want to kill the session just write `exit`. Also use `tmux ls` to list al
 
 ## Changelog
 
-- v.0.1.0: Version compatible with Corisca, Ile de France, and Swiss scenarios.  
+- v0.1.1: Updated `odtp.yml` to version v0.3.4 (https://github.com/odtp-org/odtp-component-template/commit/c4732294bb57bd5dfdc9630f4676f69462a3c07e)
+- v0.1.0: Version compatible with Corisca, Ile de France, and Swiss scenarios.  
 
 ## Development. 
 
