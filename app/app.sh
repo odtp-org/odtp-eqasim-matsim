@@ -75,5 +75,5 @@ python3 -m synpp
 
 
 # Copying output in odtp-output
-mkdir /odtp/odtp-output/eqasim-output
-cp -r /odtp/odtp-workdir/output/* /odtp/odtp-output/eqasim-output
+mkdir /odtp/odtp-output/eqasim-matsim-output
+cp -r /odtp/odtp-workdir/output/* /odtp/odtp-output/eqasim-matsim-output
