@@ -27,23 +27,50 @@ RUN apt-get update && apt-get -y upgrade \
 # ODTP setup
 ##################################################
 
-COPY odtp-component-client/requirements.txt /tmp/odtp.requirements.txt
+COPY odtp.requirements.txt /tmp/odtp.requirements.txt
 RUN pip install -r /tmp/odtp.requirements.txt
 
+##################################################
+# Java setup
+##################################################
 
-#######################################################################
-# PLEASE INSTALL HERE ALL SYSTEM DEPENDENCIES RELATED TO YOUR TOOL
-#######################################################################
+# Install OpenJDK-11
+RUN apt-get update && \
+    apt-get install -y openjdk-11-jre-headless default-jdk && \
+    apt-get clean;
 
-# Installing dependecies from the app
+##################################################
+# Maven setup
+##################################################
+
+RUN mkdir /tmp/maven
+RUN wget https://repo.maven.apache.org/maven2/org/apache/maven/apache-maven/3.6.3/apache-maven-3.6.3-bin.tar.gz -O /tmp/maven.tar.gz
+RUN tar xf /tmp/maven.tar.gz -C /tmp/maven 
+RUN export PATH=/tmp/apache-maven-3.6.3/bin:$PATH
+
+##################################################
+# Osmosis setup
+##################################################
+
+RUN mkdir /tmp/osmosis
+RUN wget https://github.com/openstreetmap/osmosis/releases/download/0.48.3/osmosis-0.48.3.tgz -O /tmp/osmosis.tgz
+RUN tar xf /tmp/osmosis.tgz -C /tmp/osmosis
+
+##################################################
+# GDAL Setup
+##################################################
+
+RUN apt-get update && \
+    apt-get install -y libgdal-dev && \
+    apt-get clean;
+
+##################################################
+# Eqasim setup
+##################################################
+
 COPY requirements.txt /tmp/requirements.txt
 RUN pip install -r /tmp/requirements.txt
 
-
-######################################################################
-# ODTP COMPONENT CONFIGURATION. 
-# DO NOT TOUCH UNLESS YOU KNOW WHAT YOU ARE DOING.
-######################################################################
 
 ##################################################
 # ODTP Preparation
