@@ -51,7 +51,7 @@ processes=4
 hts=entd
 sampling_rate=0.001
 random_seed=1234
-java_memory=8GB
+java_memory=8G
 ```
 
 For IDF
