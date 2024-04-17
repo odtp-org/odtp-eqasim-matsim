@@ -6,6 +6,7 @@ dryrun: false
 # Requested stages
 run:
   - matsim.output
+  - matsim.simulation.run
 
 # These are configuration options that we use in the pipeline
 config:

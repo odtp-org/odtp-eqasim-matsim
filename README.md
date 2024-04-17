@@ -126,6 +126,7 @@ If you want to kill the session just write `exit`. Also use `tmux ls` to list al
 - v0.1.2: 
     - Corrected bug related to installation of dependencies for `odtp-component-client`
     - Corrected typo in `odtp.yml`
+    - Added `-matsim.simulation.run` to templates to trigger `matsim`
 - v0.1.1: Updated `odtp.yml` to version v0.3.4 (https://github.com/odtp-org/odtp-component-template/commit/c4732294bb57bd5dfdc9630f4676f69462a3c07e)
 - v0.1.0: Version compatible with Corisca, Ile de France, and Swiss scenarios.  
 
