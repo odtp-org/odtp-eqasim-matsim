@@ -64,14 +64,15 @@ else
 
 fi
 
-# Running Eqasim pipeline
+# Running Eqasim Matsim pipeline
 python3 -m synpp
 
+#java -Xmx14G -cp ile_de_france-1.0.6.jar org.eqasim.ile_de_france.RunSimulation --config-path ile_de_france_config.xml
 
 # For some reason it fails the first time the command is executed it appears a maven related issue 
 # Could not transfer artifact org.geotools:gt-opengis:jar:24.2 from/to osgeo
-sleep 10
-python3 -m synpp
+#sleep 10
+#python3 -m synpp
 
 
 # Copying output in odtp-output
