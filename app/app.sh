@@ -69,7 +69,7 @@ python3 -m synpp
 
 if [ "$SCENARIO" == "IDF" ] || [ "$SCENARIO" == "CORSICA" ]; then
     cd /odtp/odtp-workdir/output
-    java -Xmx$java_memory -cp ${output_id}_run.jar org.eqasim.ile_de_france.RunSimulation --config-path ${output_id}_config.xml
+    java -Xmx$java_memory -cp ${output_id}_run.jar org.${output_id}.ile_de_france.RunSimulation --config-path ${output_id}_config.xml
 fi
 
 # In some cases it fails the first time the command is executed it appears a maven related issue 
