@@ -52,6 +52,7 @@ hts=entd
 sampling_rate=0.001
 random_seed=1234
 java_memory=8G
+output_id=output
 ```
 
 For IDF
@@ -62,6 +63,7 @@ sampling_rate=0.001
 random_seed=1234
 java_memory=24G
 hts=entd
+output_id=output
 ```
 
 For CH
@@ -76,7 +78,7 @@ enable_scaling=true
 scaling_year=2020
 use_freight=true
 hafas_date=01.10.2018
-output_id=test
+output_id=output
 ```
 
 3. Build the dockerfile 
@@ -126,7 +128,9 @@ If you want to kill the session just write `exit`. Also use `tmux ls` to list al
 - v0.1.2: 
     - Corrected bug related to installation of dependencies for `odtp-component-client`
     - Corrected typo in `odtp.yml`
-    - Added `-matsim.simulation.run` to templates to trigger `matsim`
+    - Added java simulation command to templates to trigger `matsim`
+    - Added `output_id` as a parameter
+
 - v0.1.1: Updated `odtp.yml` to version v0.3.4 (https://github.com/odtp-org/odtp-component-template/commit/c4732294bb57bd5dfdc9630f4676f69462a3c07e)
 - v0.1.0: Version compatible with Corisca, Ile de France, and Swiss scenarios.  
 

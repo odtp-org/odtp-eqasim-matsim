@@ -67,11 +67,16 @@ fi
 # Running Eqasim pipeline
 python3 -m synpp
 
+if [ "$SCENARIO" == "IDF" ] || [ "$SCENARIO" == "CORSICA" ]; then
+    cd /odtp/odtp-workdir/output
+    java -Xmx$java_memory -cp ${output_id}_run.jar org.eqasim.ile_de_france.RunSimulation --config-path ${output_id}_config.xml
+fi
 
-# For some reason it fails the first time the command is executed it appears a maven related issue 
+# In some cases it fails the first time the command is executed it appears a maven related issue 
+# However another run seems to fix this
 # Could not transfer artifact org.geotools:gt-opengis:jar:24.2 from/to osgeo
-sleep 10
-python3 -m synpp
+# sleep 10
+# python3 -m synpp
 
 
 # Copying output in odtp-output
