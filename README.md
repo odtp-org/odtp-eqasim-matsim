@@ -125,6 +125,14 @@ If you want to kill the session just write `exit`. Also use `tmux ls` to list al
 
 ## Changelog
 
+- v0.1.6
+    - Simplified Dockerfile and compatibility with Windows building
+    - Github actions
+
+- v0.1.5
+
+- v0.1.4
+
 - v0.1.3:
     - Ubuntu fixed at 22.04
     - Python fixed at 3.10
