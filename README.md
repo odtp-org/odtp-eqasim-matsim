@@ -15,7 +15,7 @@ ODTP component for running Eqasim Matsim Pipeline.
 ```odtp new component 
 odtp new odtp-component-entry \
 --name odtp-eqasim-matsim \
---component-version 0.1.2 \
+--component-version 0.1.6 \
 --repository https://github.com/odtp-org/odtp-eqasim-matsim
 ``` 
 
