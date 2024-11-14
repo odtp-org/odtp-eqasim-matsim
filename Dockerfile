@@ -67,6 +67,7 @@ RUN export C_INCLUDE_PATH=/usr/include/gdal
 ##################################################
 
 COPY requirements.txt /tmp/requirements.txt
+RUN pip install --upgrade pip
 RUN pip install -r /tmp/requirements.txt
 
 
