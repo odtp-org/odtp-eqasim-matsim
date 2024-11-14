@@ -128,6 +128,7 @@ If you want to kill the session just write `exit`. Also use `tmux ls` to list al
 - v0.1.6
     - Simplified Dockerfile and compatibility with Windows building
     - Github actions
+    - Fixed rasterio and fiona versions
 
 - v0.1.5
 
