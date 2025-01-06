@@ -1,4 +1,7 @@
-# This file should contain basic component information for your component.
+# Schema version for tracking updates to the schema format
+schema-version: "v0.5.0"
+
+# Component Information
 component-name: odtp-eqasim-matsim
 component-version: v0.1.7
 component-license: BSD-3-Clause
